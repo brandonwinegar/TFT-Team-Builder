@@ -1,0 +1,16 @@
+<div class="grid-container">
+  <div class="header">HEADER</div>
+  <div class="synergies">SYNERGIES</div>
+  <div class="team flex-container">
+    TEAM
+    <div *ngFor="let champ of team">
+      <icon [champ]="champ" (click)="removeFromTeam(champ)"></icon>
+    </div>
+  </div>
+  <div class="champs flex-container">
+    CHAMPS
+    <div *ngFor="let champ of champs | async">
+      <icon [champ]="champ" (click)="addToTeam(champ)"></icon>
+    </div>
+  </div>
+</div>
